@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <div class="containerImgPicker">
+        <div class="titel">
+            <h1>Image Picker</h1>
+        </div>
+        <select id="pilih" onchange="img()">
+            <option value="pilih">-- Pilih Gambar --</option>
+            <option class="gambar" id="bungakemuning" value="bungakemuning">Gambar Bunga Kemuning</option>
+            <option class="gambar" id="bungalily" value="bungalily">Gambar Bunga Lily</option>
+            <option class="gambar" id="bungamawar" value="bungamawar">Gambar Bunga Mawar</option>
+            <option class="gambar" id="bungamelati" value="bungamelati">Gambar Bunga Melati</option>
+            <option class="gambar" id="bungasepatu" value="bungasepatu">Gambar Bunga Sepatu</option>
+        </select>
+        <img id="image" src="" alt="">
+    </div>
+
+    <script>
+        function img() {
+            const pilih = document.getElementById("pilih")
+            if (pilih.value == "bungakemuning") {
+                document.getElementById("image").src = "bungakemuning.jpg"
+                alert("ini gambar bunga kemuning")
+            }
+            else if (pilih.value == "bungalily") {
+                document.getElementById("image").src = "bungalily.jpg"
+                alert("ini gambar bunga lily")
+            }
+            else if (pilih.value == "bungamawar") {
+                document.getElementById("image").src = "bungamawar.jpg"
+                alert("ini gambar bunga mawar")
+            }
+            else if (pilih.value == "bungamelati") {
+                document.getElementById("image").src = "bungamelati.png"
+                alert("ini gambar bunga melati")
+            }
+            else if (pilih.value == "bungasepatu") {
+                document.getElementById("image").src = "bungasepatu.jpeg"
+                alert("ini gambar bunga sepatu")
+            }
+            else {
+                document.getElementById("image").src = 0
+            }
+        }
+    </script>
+</body>
+</html>
